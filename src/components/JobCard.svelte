@@ -5,7 +5,9 @@
 </script>
 
 <div class="card">
-	<div class="logo" style="background-image: url({job.company_logo});" />
+	{#if job.company_logo}
+		<div class="logo" style="background-image: url({job.company_logo});" />
+	{/if}
 	<div class="job-info">
 		<p class="company-title">{job.company}</p>
 		<h1 class="job-title">{job.title}</h1>
