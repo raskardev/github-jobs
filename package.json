@@ -2,14 +2,14 @@
 	"name": "github-jobs",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "svelte-kit dev",
+		"dev": "svelte-kit dev -p 3001",
 		"build": "svelte-kit build",
 		"preview": "svelte-kit preview",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-vercel": "^1.0.0-next.22",
+		"@sveltejs/adapter-vercel": "next",
 		"@sveltejs/kit": "next",
 		"eslint": "^7.27.0",
 		"eslint-config-prettier": "^8.3.0",

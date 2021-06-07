@@ -12,10 +12,10 @@
 	{/each}
 	<div class="pagination">
 		<button
-			disabled={skip === 0 || skip - 9 <= 0}
+			disabled={skip - 9 < 0}
 			on:click={() => {
 				skip = skip - 9;
-				window.scrollTo(0, 0);
+				window.scrollTo({ top: 0, behavior: 'smooth' });
 			}}
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,10 @@
 			</svg></button
 		>
 		<button
-			on:click={() => (skip = skip + 9)}
+			on:click={() => {
+				skip = skip + 9;
+				window.scrollTo({ top: 0, behavior: 'smooth' });
+			}}
 			disabled={skip === jobs.length || skip + 9 >= jobs.length}
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
